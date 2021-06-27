@@ -22,11 +22,19 @@ public class calendar {
 		
 		Scanner scan = new Scanner(System.in);
 		calendar cal = new calendar();
-		System.out.println("달을 입력하세요 ");
-		int month = scan.nextInt();
 		
-		System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
-		cal.printSampleCalendar();
+		
+		System.out.println("반복횟수를 입력하세요 ");
+		int repeat = scan.nextInt();
+		
+		while(repeat>0) {
+			System.out.println("달을 입력하세요 ");			
+			int month = scan.nextInt();
+			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
+			repeat--;
+		}
+		
+		//cal.printSampleCalendar();
 				
 	}
 
